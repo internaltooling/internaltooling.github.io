@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RFC-0001 — The tool nobody asked for — internaltooling</title>
+<meta name="description" content="RFC-0001: on building software for problems that only exist because you wanted to build the software.">
+<meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1318" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">skip to content</a>
+
+<div class="banner" role="presentation">internal use only · public by mistake · clearance: any</div>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>internaltooling</a>
+    <nav class="nav" id="nav" aria-label="Site">
+      <a href="/writings/" aria-current="page"><span class="slash">/</span>writings</a>
+      <a href="/projects/"><span class="slash">/</span>projects</a>
+      <a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer"><span class="slash">/</span>x&nbsp;@internaltooling&nbsp;↗</a>
+      <button class="theme-btn" type="button">theme: light</button>
+      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span></button>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ <span class="menu-label">menu</span></button>
+  </div>
+</header>
+
+<main id="main">
+  <p class="crumbs"><a href="/writings/">~/writings</a> $ cat rfc-0001.txt</p>
+
+  <div class="doc-head">
+    <p class="doc-id"><span>RFC-0001</span><span>filed 2026-01-12</span><span>version 1.2</span><span class="stamp">accepted</span></p>
+    <h1>The tool nobody asked for</h1>
+    <p class="lede">Every few weeks I build a tool to solve a problem that did not exist until I wanted to build the tool. This document stops pretending that is an accident.</p>
+  </div>
+
+  <h2>Summary</h2>
+  <p>This memo describes a recurring pattern: a small inconvenience is noticed, a smaller tool is designed, and six weekends later the tool has a plug-in system. The pattern is not a bug. It is the entire business case for the hobby. This RFC proposes accepting the loop, naming it, and keeping the blast radius small.</p>
+
+  <p>Central to the proposal is a distinction between problems that need solving and problems that need <em>having</em>. A flat tyre needs solving. A folder of 40,000 files that could, in principle, be renamed according to a scheme you have not yet invented — that is a habitat. Tools built for habitats are different from tools built for tasks, and they should be judged differently: not by whether they finish the job, but by whether they keep the rain out.</p>
+
+  <h2>Motivation</h2>
+  <p>The immediate motivation was a Saturday. I had eleven things to do and did none of them, because I spent the day writing a script that renames screenshots. The script works. It has flags. One of the flags is <code>--dry-run-but-for-real</code>, whose behaviour is identical to <code>--dry-run</code>. I am not proud, but I am finished, which is more than I can say for the eleven things.</p>
+
+  <blockquote>Give someone a tool and they have a tool. Let them build the tool and they have a reason to avoid the task forever.</blockquote>
+
+  <h2>Non-goals</h2>
+  <ul>
+    <li>This document does not propose building fewer tools. That has been proposed before, in RFC-0000, which was never filed because I was busy building a tool.</li>
+    <li>It does not define a standard for tool quality. The standard is: would past-me, finding it with no README, forgive present-me?</li>
+    <li>It does not exclude the possibility that the tool becomes useful. That is regarded as an acceptable outcome of the hobby, like a lottery ticket that occasionally pays.</li>
+  </ul>
+
+  <h2>Proposed design</h2>
+  <p>The lifecycle of a tool nobody asked for has five observable stages. Monitoring them is cheaper than resisting them:</p>
+
+  <pre><code>itch ──▶ sketch ──▶ build ──▶ polish ──▶ habitat
+          (1h)      (1d)     (1-6 wk)   (forever)
+                            │
+                            └─▶ abandoned ──▶ guilt ──▶ itch
+</code></pre>
+
+  <p>Stage four is where the damage happens. Polishing is indistinguishable from work from the inside, which is exactly why it is so attractive. The proposal is to cap stage four at two sessions: after the second session, the tool ships as-is, warts documented, and joins the habitat.</p>
+
+  <h2>Alternatives considered</h2>
+  <p><strong>Do nothing.</strong> Considered annually, every January. Rejected for lack of a tool to help with it.</p>
+  <p><strong>Use an existing tool.</strong> Rejected on the grounds that the existing tool was built by someone else, for their habitat, and therefore does not have the flag I would have added.</p>
+
+  <h2>Drawbacks</h2>
+  <p>The main cost is opportunity cost, which is invisible and therefore free. Secondary costs include disk space, one domain name per good mood, and the specific shame of a README that says <code>TODO: everything</code> in a repository with 214 commits.</p>
+
+  <h2>Status</h2>
+  <p>Accepted. Implementation, as always, is already complete and was the point.</p>
+
+  <div class="doc-foot">
+    <p><a href="/writings/">← index of filings</a> · next: <a href="/writings/runbooks-are-love-letters/">RFC-0002 — Runbooks are love letters</a></p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <span>internaltooling · all systems nominal</span>
+    <span><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a> · <span class="kbd">⌘K</span> to navigate · no cookies, no trackers, just files</span>
+  </div>
+</footer>
+</body>
+</html>
