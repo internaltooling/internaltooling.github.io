@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>writings — internaltooling</title>
 <meta name="description" content="Writings, filed as RFCs: the tool nobody asked for, runbooks are love letters, deprecate yourself gracefully.">
-<meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1318" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Ronzino-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/MartianMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">skip to content</a>
 
-<div class="banner" role="presentation">internal use only · public by mistake · clearance: any</div>
+<div class="banner" role="presentation"><span>internal use only · public by mistake · clearance: any</span><span>no cookies · no trackers · just files</span></div>
 
 <header class="bar">
   <div class="bar-inner">
@@ -27,7 +28,7 @@
       <a href="/projects/"><span class="slash">/</span>projects</a>
       <a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer"><span class="slash">/</span>x&nbsp;@internaltooling&nbsp;↗</a>
       <button class="theme-btn" type="button">theme: light</button>
-      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span></button>
+      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span> jump</button>
     </nav>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ <span class="menu-label">menu</span></button>
   </div>
@@ -60,13 +61,34 @@
     </a></li>
   </ul>
 
-  <p class="muted mono">3 documents · queue: 1 draft, 0 abandoned this quarter</p>
+  <p class="tally">3 documents · queue: 1 draft, 0 abandoned this quarter</p>
 </main>
 
 <footer class="foot">
+  <div class="hazard" aria-hidden="true"></div>
   <div class="foot-inner">
-    <span>internaltooling · all systems nominal</span>
-    <span><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a> · <span class="kbd">⌘K</span> to navigate · no cookies, no trackers, just files</span>
+    <div class="plate">
+      <div>
+        <h3>model</h3>
+        <p class="model">internaltooling</p>
+        <p>Pseudonymous operator of a very small fleet.</p>
+        <span class="pill ok live">all systems nominal</span>
+      </div>
+      <div>
+        <h3>index</h3>
+        <ul><li><a href="/">/home</a></li><li><a href="/writings/">/writings</a></li><li><a href="/projects/">/projects</a></li></ul>
+      </div>
+      <div>
+        <h3>elsewhere</h3>
+        <ul><li><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></li></ul>
+      </div>
+      <div>
+        <h3>operating notes</h3>
+        <p><span class="kbd">⌘K</span> to navigate</p>
+        <p>no cookies, no trackers, just files</p>
+      </div>
+    </div>
+    <p class="foot-line"><span>internaltooling · all systems nominal</span><span>internal use only · public by mistake</span></p>
   </div>
 </footer>
 </body>

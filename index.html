@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>internaltooling</title>
 <meta name="description" content="internaltooling — pseudonymous operator of a very small fleet. Writings filed as RFCs, projects run as services.">
-<meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1318" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Ronzino-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/MartianMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">skip to content</a>
 
-<div class="banner" role="presentation">internal use only · public by mistake · clearance: any</div>
+<div class="banner" role="presentation"><span>internal use only · public by mistake · clearance: any</span><span>no cookies · no trackers · just files</span></div>
 
 <header class="bar">
   <div class="bar-inner">
@@ -27,48 +28,63 @@
       <a href="/projects/"><span class="slash">/</span>projects</a>
       <a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer"><span class="slash">/</span>x&nbsp;@internaltooling&nbsp;↗</a>
       <button class="theme-btn" type="button">theme: light</button>
-      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span></button>
+      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span> jump</button>
     </nav>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ <span class="menu-label">menu</span></button>
   </div>
 </header>
 
 <main id="main">
-  <p class="crumbs">~/internaltooling $ whoami</p>
-
-  <h1>internaltooling</h1>
-  <p class="lede">Pseudonymous operator of a very small fleet. I build tools nobody asked for, file RFCs against my own behaviour, and keep the lights green for an audience of one. You are welcome to look around — everything here is marked internal, which is a joke that got out of hand.</p>
-
-  <section class="panel" aria-labelledby="operator-h">
-    <div class="panel-head"><span id="operator-h">operator record</span><span>rec/001</span></div>
-    <div class="panel-body">
-      <dl class="kv">
-        <dt>handle</dt><dd>internaltooling</dd>
-        <dt>role</dt><dd>operator; responder of pages</dd>
-        <dt>location</dt><dd>behind the terminal</dd>
-        <dt>clearance</dt><dd>self-administered</dd>
-        <dt>status</dt><dd><span class="pill ok live">active</span></dd>
-        <dt>uptime</dt><dd class="mono" data-uptime="2024-03-15T09:00:00Z">…</dd>
-      </dl>
+  <section class="hero">
+    <p class="crumbs">~/internaltooling $ whoami</p>
+    <p class="rubber" aria-hidden="true">internal use only<br>public by mistake</p>
+    <h1 class="wordmark"><span>internal</span><span>tooling</span></h1>
+    <div class="hero-grid">
+      <p class="lede">Pseudonymous operator of a very small fleet. I build tools nobody asked for, file RFCs against my own behaviour, and keep the lights green for an audience of one. You are welcome to look around — everything here is marked internal, which is a joke that got out of hand.</p>
+      <div class="actions">
+        <a class="btn primary" href="/writings/">read the filings <span class="arrow">→</span></a>
+        <a class="btn" href="/projects/">service catalogue <span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
-  <section class="panel" aria-labelledby="checks-h">
-    <div class="panel-head"><span id="checks-h">health checks</span><span>last run: just now</span></div>
-    <div class="panel-body">
-      <ul class="checks">
-        <li><span class="tag ok">OK</span><span>web root — serving</span></li>
-        <li><span class="tag ok">OK</span><span>stylesheets — 1 of 1 loaded</span></li>
-        <li><span class="tag ok">OK</span><span>analytics — none found (correct)</span></li>
-        <li><span class="tag ok">OK</span><span>rfcs — 3 filed, 2 accepted</span></li>
-        <li><span class="tag ok">OK</span><span>services — 2 live, 1 beta, 1 dark</span></li>
-        <li><span class="tag warn">WARN</span><span>sleep schedule — degraded</span></li>
-        <li><span class="tag ok">OK</span><span>ego — within limits</span></li>
-      </ul>
-    </div>
-  </section>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track">
+    <span>watchtower — live</span><span>logthief — live</span><span class="w">pager-rotation-of-one — beta</span><span class="n">sendmorepackets — archived</span><span>rfcs — 3 filed, 2 accepted</span><span class="w">sleep schedule — degraded</span>
+    <span>watchtower — live</span><span>logthief — live</span><span class="w">pager-rotation-of-one — beta</span><span class="n">sendmorepackets — archived</span><span>rfcs — 3 filed, 2 accepted</span><span class="w">sleep schedule — degraded</span>
+  </div></div>
 
-  <h2>Recent filings</h2>
+  <div class="panels">
+    <section class="panel" aria-labelledby="operator-h">
+      <div class="panel-head"><span id="operator-h">operator record</span><span>rec/001</span></div>
+      <div class="panel-body">
+        <dl class="kv">
+          <dt>handle</dt><dd>internaltooling</dd>
+          <dt>role</dt><dd>operator; responder of pages</dd>
+          <dt>location</dt><dd>behind the terminal</dd>
+          <dt>clearance</dt><dd>self-administered</dd>
+          <dt>status</dt><dd><span class="pill ok live">active</span></dd>
+          <dt>uptime</dt><dd class="mono" data-uptime="2024-03-15T09:00:00Z">…</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="checks-h">
+      <div class="panel-head"><span id="checks-h">health checks</span><span>last run: just now</span></div>
+      <div class="panel-body">
+        <ul class="checks">
+          <li><span class="tag ok">OK</span><span>web root — serving</span></li>
+          <li><span class="tag ok">OK</span><span>stylesheets — 1 of 1 loaded</span></li>
+          <li><span class="tag ok">OK</span><span>analytics — none found (correct)</span></li>
+          <li><span class="tag ok">OK</span><span>rfcs — 3 filed, 2 accepted</span></li>
+          <li><span class="tag ok">OK</span><span>services — 2 live, 1 beta, 1 dark</span></li>
+          <li><span class="tag warn">WARN</span><span>sleep schedule — degraded</span></li>
+          <li><span class="tag ok">OK</span><span>ego — within limits</span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-head"><h2>Recent filings</h2><span class="mono">3 documents</span></div>
   <ul class="records">
     <li><a class="record" href="/writings/the-tool-nobody-asked-for/">
       <span class="id">RFC-0001</span>
@@ -89,13 +105,34 @@
       <span class="summary">The goal of every system you run is to stop needing you. A staged plan for your own sunset.</span>
     </a></li>
   </ul>
-  <p><a href="/writings/">all writings →</a> · <a href="/projects/">service catalogue →</a></p>
+  <p class="more"><a class="btn" href="/writings/">all writings <span class="arrow">→</span></a><a class="btn" href="/projects/">service catalogue <span class="arrow">→</span></a></p>
 </main>
 
 <footer class="foot">
+  <div class="hazard" aria-hidden="true"></div>
   <div class="foot-inner">
-    <span>internaltooling · all systems nominal</span>
-    <span><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a> · <span class="kbd">⌘K</span> to navigate · no cookies, no trackers, just files</span>
+    <div class="plate">
+      <div>
+        <h3>model</h3>
+        <p class="model">internaltooling</p>
+        <p>Pseudonymous operator of a very small fleet.</p>
+        <span class="pill ok live">all systems nominal</span>
+      </div>
+      <div>
+        <h3>index</h3>
+        <ul><li><a href="/">/home</a></li><li><a href="/writings/">/writings</a></li><li><a href="/projects/">/projects</a></li></ul>
+      </div>
+      <div>
+        <h3>elsewhere</h3>
+        <ul><li><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></li></ul>
+      </div>
+      <div>
+        <h3>operating notes</h3>
+        <p><span class="kbd">⌘K</span> to navigate</p>
+        <p>no cookies, no trackers, just files</p>
+      </div>
+    </div>
+    <p class="foot-line"><span>internaltooling · all systems nominal</span><span>internal use only · public by mistake</span></p>
   </div>
 </footer>
 </body>

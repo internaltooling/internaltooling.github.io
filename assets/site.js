@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#f3f0e8", dark: "#0e1318" };
+  var colors = { light: "#efece4", dark: "#0d0d0c" };
 
   // ---- theme ----
 
@@ -59,12 +59,11 @@
     });
   }
 
-  // ---- health checks on the home page ----
+  // ---- 404: show the path that failed ----
 
-  var checks = document.querySelectorAll(".checks li");
-  checks.forEach(function (li, i) {
-    setTimeout(function () { li.classList.add("shown"); }, 120 + i * 140);
-  });
+  document.querySelectorAll(".trace").forEach(function (el) { el.textContent = location.pathname; });
+
+  // ---- uptime on the home page ----
 
   var uptime = document.querySelector("[data-uptime]");
   if (uptime) {
