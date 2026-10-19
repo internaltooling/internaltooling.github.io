@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#ffffff", dark: "#000000" };
+  var colors = { light: "#dedad2", dark: "#0d0a10" };
 
   // ---- theme ----
 
@@ -67,17 +67,24 @@
 
   var escape = document.querySelector("[data-escape]");
 
-  // ---- uptime on the home page ----
+  // ---- uptime on the home page: the record, and a line like `uptime` prints ----
 
   var uptime = document.querySelector("[data-uptime]");
+  var upline = document.querySelector("[data-upline]");
   if (uptime) {
     var start = Date.parse(uptime.dataset.uptime);
+    var two = function (n) { return (n < 10 ? "0" : "") + n; };
     var tick = function () {
       var s = Math.floor((Date.now() - start) / 1000);
       var d = Math.floor(s / 86400);
       var h = Math.floor((s % 86400) / 3600);
       var m = Math.floor((s % 3600) / 60);
       uptime.textContent = d + "d " + h + "h " + m + "m " + (s % 60) + "s";
+      if (upline) {
+        var now = new Date();
+        upline.textContent = two(now.getHours()) + ":" + two(now.getMinutes()) + ":" + two(now.getSeconds()) +
+          " up " + d + " days, " + h + ":" + two(m) + ", 1 user";
+      }
     };
     tick();
     setInterval(tick, 1000);

@@ -5,34 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>projects — internaltooling</title>
 <meta name="description" content="Projects, run as services: watchtower, logthief, pager-rotation-of-one, sendmorepackets. A catalogue of a very small fleet.">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/Ronzino-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">skip to content</a>
-<div class="guides" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="dots" aria-hidden="true"><i></i></div>
+<div class="page">
 
 <header class="bar">
-  <a class="brand" href="/">internaltooling</a>
-  <nav class="nav" id="nav" aria-label="Site">
-    <a href="/writings/">Writings</a>
-    <a href="/projects/" aria-current="page">Projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">Control</button>
-  </nav>
+  <a class="brand" href="/">~internaltooling</a>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+  <nav class="nav" id="nav" aria-label="Site">
+    <span class="nav-h">directories:</span>
+    <a href="/writings/">~/writings</a>
+    <a href="/projects/" aria-current="page">~/projects</a>
+    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+  </nav>
+  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main">
-  <p class="crumbs">~/internaltooling/projects $ fleetctl status</p>
-  <h1 class="lede">The catalogue of the fleet. Each entry is a real thing I run, maintained to the standard of a rumour: it exists, it mostly works, and the uptime bars are honest more often than the descriptions.</h1>
-
-  <section class="registry" aria-label="Services">
-  <div class="reg-head" aria-hidden="true"><span class="c-date">Version</span><span class="c-obj">Object</span><span class="c-subj">Subject</span><span class="c-ctl">Control</span></div>
+<main id="main" class="single">
+  <section class="box hello">
+    <pre class="banner" aria-hidden="true"> ._  ._ _  o  _   _ _|_  _
+ |_) | (_) | (/_ (_  |_ _>
+ |        _|</pre>
+    <p class="crumbs">~/internaltooling/projects $ fleetctl status</p>
+  </section>
+  <section class="box">
+    <h1 class="lede">The catalogue of the fleet. Each entry is a real thing I run, maintained to the standard of a rumour: it exists, it mostly works, and the uptime bars are honest more often than the descriptions.</h1>
+  </section>
+  <section class="box registry" aria-label="Services">
+  <div class="box-h reg-head" aria-hidden="true"><span>projects</span><span>version · object · subject · control</span></div>
   <ul class="rows services">
     <li class="svc" id="svc-01">
       <div class="row is-static">
@@ -92,8 +101,9 @@
     </li>
   </ul>
   </section>
-
-  <p class="tally">fleet total: 2 live · 1 beta · 1 dark · mean time between hobbies: 3 weeks</p>
+  <section class="box">
+    <p class="tally">fleet total: 2 live · 1 beta · 1 dark · mean time between hobbies: 3 weeks</p>
+  </section>
 </main>
 
 <footer class="foot">
@@ -104,5 +114,6 @@
   <p class="f-5">internal use only · public by mistake · clearance: any</p>
   <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
 </footer>
+</div>
 </body>
 </html>
