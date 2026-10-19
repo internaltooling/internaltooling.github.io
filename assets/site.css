@@ -137,6 +137,7 @@ code, kbd, pre, .mono {
 code { font-size: 0.82em; white-space: nowrap; hyphens: none; }
 kbd { font-size: var(--t1); padding: 0 var(--s1); border: 1px solid var(--hair); border-radius: 3px; }
 pre kbd { padding: 0; border: 0; font-size: inherit; }
+.foot kbd { padding: 0; border: 0; }
 
 .skip { position: absolute; left: var(--margin); top: -100px; background: var(--ink); color: var(--paper); padding: var(--s2) var(--s3); z-index: 10; }
 .skip:focus { top: var(--s3); }
@@ -236,7 +237,7 @@ main { flex: 1; }
   flex-direction: column;
   gap: var(--s1);
   min-height: 152px;
-  padding: var(--s2) calc(var(--gutter) / 2) var(--s3);
+  padding: var(--s3) calc(var(--gutter) / 2);
   border-left: 1px solid var(--rule);
   text-decoration: none;
 }
@@ -275,6 +276,7 @@ a.cell:focus-visible { outline-offset: -2px; }
 .sec-b { grid-column: var(--col-main); }
 .intro + .sec, .intro + .doc { padding-top: 0; }
 .sec + .sec { padding-top: var(--s5); }
+.index ~ .sec + .sec { padding-top: var(--s6); }
 .sec-plain { padding-top: var(--s5); }
 .sec-b > * + * { margin-top: var(--s4); }
 .sec-b .lede + .mono-line, .sec-b p + .mono-line, .sec-b > .uptime-legend { margin-top: var(--s2); }
@@ -300,7 +302,9 @@ a.cell:focus-visible { outline-offset: -2px; }
 .kv { display: grid; grid-template-columns: var(--k) minmax(0, 1fr); margin-top: calc(-1 * var(--s2)); }
 .kv dt, .kv dd { padding: var(--s2) 0; border-bottom: 1px solid var(--hair); }
 .kv dt { color: var(--mute); }
+.kv, .checks { font-variant-numeric: lining-nums; }
 .kv dd.num { font-variant-numeric: tabular-nums lining-nums; }
+.kv .state { margin-left: calc(-8px - var(--s2)); }
 .state { display: inline-flex; align-items: baseline; gap: var(--s2); }
 .state::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); transform: translateY(-1px); }
 .state.warn::before { background: var(--warn); }
@@ -314,6 +318,9 @@ a.cell:focus-visible { outline-offset: -2px; }
 .checks li { display: grid; grid-template-columns: var(--k) minmax(0, 1fr); align-items: baseline; padding: var(--s2) 0; border-bottom: 1px solid var(--hair); }
 .checks .tag { font: 500 var(--t2) / var(--lh) var(--mono); color: var(--ok); }
 .checks .warn .tag { color: var(--warn); }
+@media (max-width: 639px) {
+  .checks li { grid-template-columns: 3.5em minmax(0, 1fr); }
+}
 
 
 /* registry rows (home and writings): date, object, subject, control */
