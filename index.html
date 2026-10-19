@@ -5,140 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>internaltooling</title>
 <meta name="description" content="internaltooling — pseudonymous operator of a very small fleet. Writings filed as RFCs, projects run as services.">
-<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">skip to content</a>
-<div class="dots" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">Skip to content</a>
 <div class="page">
 
-<header class="bar">
-  <a class="brand" href="/" aria-current="page">~internaltooling</a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+<header class="top grid">
+  <a class="brand" href="/" aria-current="page">internaltooling</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span></button>
   <nav class="nav" id="nav" aria-label="Site">
-    <span class="nav-h">directories:</span>
-    <a href="/writings/">~/writings</a>
-    <a href="/projects/">~/projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+    <a href="/writings/">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
+    <button class="theme-btn" type="button">Theme: light</button>
   </nav>
-  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main" class="board">
-  <div class="col">
-  <section class="box hello">
-    <pre class="banner" aria-hidden="true"> o ._ _|_  _  ._ ._   _. | _|_  _   _  | o ._   _
- | | | |_ (/_ |  | | (_| |  |_ (_) (_) | | | | (_|
-                                                _|</pre>
-    <p class="crumbs">~/internaltooling $ whoami</p>
-  </section>
-  <section class="box">
-    <h1 class="lede">Pseudonymous operator of a very small fleet. I build tools nobody asked for, file RFCs against my own behaviour, and keep the lights green for an audience of one.</h1>
-  </section>
-  <section class="box registry" aria-label="Registry: writings and services">
-  <div class="box-h reg-head" aria-hidden="true"><span>registry</span><span>date · object · subject · control</span></div>
-  <ul class="rows">
-    <li><a class="row" href="/writings/deprecate-yourself-gracefully/">
-      <span class="c-date">2026.09.27</span>
-      <span class="c-obj">RFC-0003</span>
-      <span class="c-subj">Deprecate yourself gracefully</span>
-      <span class="c-ctl">Experimental</span>
-      <span class="c-sum">The goal of every system you run is to stop needing you. A staged plan for your own sunset.</span>
-    </a></li>
-    <li><a class="row" href="/writings/runbooks-are-love-letters/">
-      <span class="c-date">2026.04.03</span>
-      <span class="c-obj">RFC-0002</span>
-      <span class="c-subj">Runbooks are love letters</span>
-      <span class="c-ctl">Accepted</span>
-      <span class="c-sum">Documentation is written for one reader: a stranger at 3am who happens to be you.</span>
-    </a></li>
-    <li><a class="row" href="/writings/the-tool-nobody-asked-for/">
-      <span class="c-date">2026.01.12</span>
-      <span class="c-obj">RFC-0001</span>
-      <span class="c-subj">The tool nobody asked for</span>
-      <span class="c-ctl">Accepted</span>
-      <span class="c-sum">On building software for problems that only exist because you wanted to build the software.</span>
-    </a></li>
-    <li><a class="row" href="/projects/#svc-03-h">
-      <span class="c-date">2026</span>
-      <span class="c-obj">svc-03</span>
-      <span class="c-subj">pager-rotation-of-one</span>
-      <span class="c-ctl">Beta</span>
-    </a></li>
-    <li><a class="row" href="/projects/#svc-02-h">
-      <span class="c-date">2025</span>
-      <span class="c-obj">svc-02</span>
-      <span class="c-subj">logthief</span>
-      <span class="c-ctl">Live</span>
-    </a></li>
-    <li><a class="row" href="/projects/#svc-01-h">
-      <span class="c-date">2024</span>
-      <span class="c-obj">svc-01</span>
-      <span class="c-subj">watchtower</span>
-      <span class="c-ctl">Live</span>
-    </a></li>
-    <li><a class="row" href="/projects/#svc-04-h">
-      <span class="c-date">2023–2024</span>
-      <span class="c-obj">svc-04</span>
-      <span class="c-subj">sendmorepackets</span>
-      <span class="c-ctl">Archived</span>
-    </a></li>
-    <li><a class="row" href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">
-      <span class="c-date">—</span>
-      <span class="c-obj">Elsewhere</span>
-      <span class="c-subj">x/@internaltooling ↗</span>
-      <span class="c-ctl">External</span>
-    </a></li>
-  </ul>
-  </section>
-  <section class="box">
-    <p class="lede-2">You are welcome to look around — everything here is marked internal, which is a joke that got out of hand.</p>
-  </section>
-  </div>
+<main id="main">
+<section class="intro grid">
+  <h1 class="lede">Pseudonymous operator of a very small fleet. I build tools nobody asked for, file RFCs against my own behaviour, and keep the lights green for an audience of one.</h1>
+  <p class="note">You are welcome to look around — everything here is marked internal, which is a joke that got out of hand.</p>
+</section>
 
-  <div class="col">
-    <section class="box" aria-label="Uptime">
-      <p class="upline" data-upline>… up …, 1 user</p>
-    </section>
-    <section class="box spec" aria-labelledby="operator-h">
-      <h2 id="operator-h" class="box-h spec-h"><span>Operator record</span><span>rec/001</span></h2>
-      <dl class="kv">
-        <dt>handle</dt><dd>internaltooling</dd>
-        <dt>role</dt><dd>operator; responder of pages</dd>
-        <dt>location</dt><dd>behind the terminal</dd>
-        <dt>clearance</dt><dd>self-administered</dd>
-        <dt>status</dt><dd><span class="pill live">active</span></dd>
-        <dt>uptime</dt><dd class="num" data-uptime="2024-03-15T09:00:00Z">…</dd>
-      </dl>
-    </section>
-    <section class="box spec" aria-labelledby="checks-h">
-      <h2 id="checks-h" class="box-h spec-h"><span>Health checks</span><span>last run: just now</span></h2>
-      <ul class="checks">
-        <li><span class="tag">OK</span><span>web root — serving</span></li>
-        <li><span class="tag">OK</span><span>stylesheets — 1 of 1 loaded</span></li>
-        <li><span class="tag">OK</span><span>analytics — none found (correct)</span></li>
-        <li><span class="tag">OK</span><span>rfcs — 3 filed, 2 accepted</span></li>
-        <li><span class="tag">OK</span><span>services — 2 live, 1 beta, 1 dark</span></li>
-        <li class="warn"><span class="tag">WARN</span><span>sleep schedule — degraded</span></li>
-        <li><span class="tag">OK</span><span>ego — within limits</span></li>
-      </ul>
-    </section>
+<ul class="index" aria-label="Registry: writings and services">
+  <li><a class="cell" href="/writings/deprecate-yourself-gracefully/"><span class="cell-id"><span>RFC-0003</span><span>2026.09.27</span></span><span class="cell-t">Deprecate yourself gracefully</span><span class="cell-m"><span class="state warn">Experimental</span></span></a></li>
+  <li><a class="cell" href="/writings/runbooks-are-love-letters/"><span class="cell-id"><span>RFC-0002</span><span>2026.04.03</span></span><span class="cell-t">Runbooks are love letters</span><span class="cell-m"><span class="state">Accepted</span></span></a></li>
+  <li><a class="cell" href="/writings/the-tool-nobody-asked-for/"><span class="cell-id"><span>RFC-0001</span><span>2026.01.12</span></span><span class="cell-t">The tool nobody asked for</span><span class="cell-m"><span class="state">Accepted</span></span></a></li>
+  <li><a class="cell" href="/projects/#svc-03-h"><span class="cell-id"><span>svc-03</span><span>2026</span></span><span class="cell-t">pager-rotation-of-one</span><span class="cell-m"><span class="state warn">Beta</span></span></a></li>
+  <li><a class="cell" href="/projects/#svc-02-h"><span class="cell-id"><span>svc-02</span><span>2025</span></span><span class="cell-t">logthief</span><span class="cell-m"><span class="state">Live</span></span></a></li>
+  <li><a class="cell" href="/projects/#svc-01-h"><span class="cell-id"><span>svc-01</span><span>2024</span></span><span class="cell-t">watchtower</span><span class="cell-m"><span class="state">Live</span></span></a></li>
+  <li><a class="cell" href="/projects/#svc-04-h"><span class="cell-id"><span>svc-04</span><span>2023–2024</span></span><span class="cell-t">sendmorepackets</span><span class="cell-m"><span class="state none">Archived</span></span></a></li>
+  <li><a class="cell" href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer"><span class="cell-id"><span>Elsewhere</span><span></span></span><span class="cell-t">x/@internaltooling&nbsp;↗</span><span class="cell-m"><span class="state ext">External</span></span></a></li>
+</ul>
+
+<section class="sec grid" aria-labelledby="operator-h">
+  <h2 class="sec-h" id="operator-h">Operator record</h2>
+  <div class="sec-b">
+    <dl class="kv">
+      <dt>Handle</dt><dd>internaltooling</dd>
+      <dt>Role</dt><dd>operator; responder of pages</dd>
+      <dt>Location</dt><dd>behind the terminal</dd>
+      <dt>Clearance</dt><dd>self-administered</dd>
+      <dt>Status</dt><dd><span class="state">active</span></dd>
+      <dt>Uptime</dt><dd class="num" data-uptime="2024-03-15T09:00:00Z">…</dd>
+    </dl>
   </div>
+  <p class="sec-side">rec/001</p>
+</section>
+
+<section class="sec grid" aria-labelledby="checks-h">
+  <h2 class="sec-h" id="checks-h">Health checks</h2>
+  <div class="sec-b">
+    <ul class="checks">
+      <li><span class="tag">OK</span><span>web root — serving</span></li>
+      <li><span class="tag">OK</span><span>stylesheets — 1 of 1 loaded</span></li>
+      <li><span class="tag">OK</span><span>analytics — none found (correct)</span></li>
+      <li><span class="tag">OK</span><span>rfcs — 3 filed, 2 accepted</span></li>
+      <li><span class="tag">OK</span><span>services — 2 live, 1 beta, 1 dark</span></li>
+      <li class="warn"><span class="tag">WARN</span><span>sleep schedule — degraded</span></li>
+      <li><span class="tag">OK</span><span>ego — within limits</span></li>
+    </ul>
+  </div>
+  <p class="sec-side">last run: just now</p>
+</section>
 </main>
 
-<footer class="foot">
-  <p class="f-1">internaltooling · all systems nominal</p>
-  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
-  <p class="f-3">no cookies, no trackers, just files</p>
-  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
-  <p class="f-5">internal use only · public by mistake · clearance: any</p>
-  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
+<footer class="foot grid">
+  <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
+  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><kbd>⌘K</kbd> to navigate</p>
+  <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
 </body>

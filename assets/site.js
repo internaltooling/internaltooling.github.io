@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#dedad2", dark: "#0d0a10" };
+  var colors = { light: "#f7f6f2", dark: "#000000" };
 
   // ---- theme ----
 
@@ -12,7 +12,7 @@
     });
     var btn = document.querySelector(".theme-btn");
     if (btn) {
-      btn.textContent = theme === "dark" ? "theme: dark" : "theme: light";
+      btn.textContent = theme === "dark" ? "Theme: dark" : "Theme: light";
       btn.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " theme");
     }
   }
@@ -44,7 +44,7 @@
   function setMenu(open) {
     nav.classList.toggle("open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.querySelector(".menu-label").textContent = open ? "close" : "menu";
+    menuBtn.querySelector(".menu-label").textContent = open ? "Close" : "Menu";
   }
 
   if (menuBtn && nav) {
@@ -63,28 +63,21 @@
 
   document.querySelectorAll(".trace").forEach(function (el) { el.textContent = location.pathname; });
 
-  // ---- sheets: Escape goes back, like the registry ----
+  // ---- filings: Escape goes back to the index ----
 
   var escape = document.querySelector("[data-escape]");
 
-  // ---- uptime on the home page: the record, and a line like `uptime` prints ----
+  // ---- uptime counter in the operator record ----
 
   var uptime = document.querySelector("[data-uptime]");
-  var upline = document.querySelector("[data-upline]");
   if (uptime) {
     var start = Date.parse(uptime.dataset.uptime);
-    var two = function (n) { return (n < 10 ? "0" : "") + n; };
     var tick = function () {
       var s = Math.floor((Date.now() - start) / 1000);
       var d = Math.floor(s / 86400);
       var h = Math.floor((s % 86400) / 3600);
       var m = Math.floor((s % 3600) / 60);
       uptime.textContent = d + "d " + h + "h " + m + "m " + (s % 60) + "s";
-      if (upline) {
-        var now = new Date();
-        upline.textContent = two(now.getHours()) + ":" + two(now.getMinutes()) + ":" + two(now.getSeconds()) +
-          " up " + d + " days, " + h + ":" + two(m) + ", 1 user";
-      }
     };
     tick();
     setInterval(tick, 1000);
@@ -106,7 +99,7 @@
   var dialog = document.createElement("dialog");
   dialog.className = "palette";
   dialog.setAttribute("aria-label", "Command palette");
-  dialog.innerHTML = '<input type="text" placeholder="jump to…" aria-label="Search pages" autocomplete="off" spellcheck="false"><ul role="listbox"></ul>';
+  dialog.innerHTML = '<input type="text" placeholder="Jump to…" aria-label="Search pages" autocomplete="off" spellcheck="false"><ul role="listbox"></ul>';
   document.body.appendChild(dialog);
   var input = dialog.querySelector("input");
   var list = dialog.querySelector("ul");

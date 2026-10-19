@@ -5,80 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>writings — internaltooling</title>
 <meta name="description" content="Writings, filed as RFCs: the tool nobody asked for, runbooks are love letters, deprecate yourself gracefully.">
-<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">skip to content</a>
-<div class="dots" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">Skip to content</a>
 <div class="page">
 
-<header class="bar">
-  <a class="brand" href="/">~internaltooling</a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+<header class="top grid">
+  <a class="brand" href="/">internaltooling</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span></button>
   <nav class="nav" id="nav" aria-label="Site">
-    <span class="nav-h">directories:</span>
-    <a href="/writings/" aria-current="page">~/writings</a>
-    <a href="/projects/">~/projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+    <a href="/writings/" aria-current="page">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
+    <button class="theme-btn" type="button">Theme: light</button>
   </nav>
-  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main" class="single">
-  <section class="box hello">
-    <pre class="banner" aria-hidden="true">      ._ o _|_ o ._   _   _
- \/\/ |  |  |_ | | | (_| _>
-                      _|</pre>
-    <p class="crumbs">~/internaltooling/writings $ ls -la</p>
-  </section>
-  <section class="box">
-    <h1 class="lede">Everything I write is filed as a request for comments — mostly to myself, but the comments section is open by accident.</h1>
-    <p class="lede-2">Numbers are permanent, opinions are versioned, and the status stamps are honest more often than not.</p>
-  </section>
-  <section class="box registry" aria-label="Writings">
-  <div class="box-h reg-head" aria-hidden="true"><span>writings</span><span>filed · object · subject · control</span></div>
-  <ul class="rows">
-    <li><a class="row" href="/writings/the-tool-nobody-asked-for/">
-      <span class="c-date">2026.01.12</span>
-      <span class="c-obj">RFC-0001</span>
-      <span class="c-subj">The tool nobody asked for</span>
-      <span class="c-ctl">Accepted</span>
-      <span class="c-sum">On building software for problems that only exist because you wanted to build the software. Accepts the loop; documents it.</span>
-    </a></li>
-    <li><a class="row" href="/writings/runbooks-are-love-letters/">
-      <span class="c-date">2026.04.03</span>
-      <span class="c-obj">RFC-0002</span>
-      <span class="c-subj">Runbooks are love letters</span>
-      <span class="c-ctl">Accepted</span>
-      <span class="c-sum">Documentation is written for one reader: a stranger at 3am who happens to be you. Write to them kindly.</span>
-    </a></li>
-    <li><a class="row" href="/writings/deprecate-yourself-gracefully/">
-      <span class="c-date">2026.09.27</span>
-      <span class="c-obj">RFC-0003</span>
-      <span class="c-subj">Deprecate yourself gracefully</span>
-      <span class="c-ctl">Experimental</span>
-      <span class="c-sum">The goal of every system you run is to stop needing you. A staged plan for your own sunset, with rollback.</span>
-    </a></li>
-  </ul>
-  </section>
-  <section class="box">
-    <p class="tally">3 documents · queue: 1 draft, 0 abandoned this quarter</p>
-  </section>
+<main id="main">
+<section class="intro grid">
+  <h1 class="lede">Everything I write is filed as a request for comments — mostly to myself, but the comments section is open by accident.</h1>
+  <p class="note">Numbers are permanent, opinions are versioned, and the status stamps are honest more often than not.</p>
+</section>
+
+
+<section class="sec grid" id="rfc-0001" aria-labelledby="rfc-0001-h">
+  <h2 class="sec-h" id="rfc-0001-h"><span class="mono">RFC-0001</span><a href="/writings/the-tool-nobody-asked-for/">The tool nobody asked for</a></h2>
+  <div class="sec-b">
+    <p class="lede">On building software for problems that only exist because you wanted to build the software. Accepts the loop; documents it.</p>
+  </div>
+  <p class="sec-side"><span class="state">Accepted</span><br>filed 2026.01.12</p>
+</section>
+
+<section class="sec grid" id="rfc-0002" aria-labelledby="rfc-0002-h">
+  <h2 class="sec-h" id="rfc-0002-h"><span class="mono">RFC-0002</span><a href="/writings/runbooks-are-love-letters/">Runbooks are love letters</a></h2>
+  <div class="sec-b">
+    <p class="lede">Documentation is written for one reader: a stranger at 3am who happens to be you. Write to them kindly.</p>
+  </div>
+  <p class="sec-side"><span class="state">Accepted</span><br>filed 2026.04.03</p>
+</section>
+
+<section class="sec grid" id="rfc-0003" aria-labelledby="rfc-0003-h">
+  <h2 class="sec-h" id="rfc-0003-h"><span class="mono">RFC-0003</span><a href="/writings/deprecate-yourself-gracefully/">Deprecate yourself gracefully</a></h2>
+  <div class="sec-b">
+    <p class="lede">The goal of every system you run is to stop needing you. A staged plan for your own sunset, with rollback.</p>
+  </div>
+  <p class="sec-side"><span class="state warn">Experimental</span><br>filed 2026.09.27</p>
+</section>
+
+<section class="sec-plain grid">
+  <p class="c-main note">3 documents · queue: 1 draft, 0 abandoned this quarter</p>
+</section>
 </main>
 
-<footer class="foot">
-  <p class="f-1">internaltooling · all systems nominal</p>
-  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
-  <p class="f-3">no cookies, no trackers, just files</p>
-  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
-  <p class="f-5">internal use only · public by mistake · clearance: any</p>
-  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
+<footer class="foot grid">
+  <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
+  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><kbd>⌘K</kbd> to navigate</p>
+  <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
 </body>

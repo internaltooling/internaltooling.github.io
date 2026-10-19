@@ -5,65 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>404 — no such route — internaltooling</title>
 <meta name="description" content="Route lookup failed. The page is not in this namespace.">
-<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="robots" content="noindex">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">skip to content</a>
-<div class="dots" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">Skip to content</a>
 <div class="page">
 
-<header class="bar">
-  <a class="brand" href="/">~internaltooling</a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+<header class="top grid">
+  <a class="brand" href="/">internaltooling</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span></button>
   <nav class="nav" id="nav" aria-label="Site">
-    <span class="nav-h">directories:</span>
-    <a href="/writings/">~/writings</a>
-    <a href="/projects/">~/projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+    <a href="/writings/">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
+    <button class="theme-btn" type="button">Theme: light</button>
   </nav>
-  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main" class="box sheet single">
-  <div class="sheet-head">
-    <dl class="sheet-meta">
-      <dt>Requested</dt><dd><span class="trace">/the/place/you/tried</span></dd>
-      <dt>Object</dt><dd>404</dd>
-      <dt>Subject</dt><dd>No such route</dd>
-      <dt>Control</dt><dd><span class="stamp">not found</span></dd>
-    </dl>
-    <nav class="sheet-ctl" aria-label="Way out"><a href="/" data-escape>Escape</a><a href="/writings/">Writings</a><a href="/projects/">Projects</a></nav>
-  </div>
-  <p class="crumbs">~ $ cd <span class="trace">/the/place/you/tried</span></p>
-  <pre class="banner" aria-hidden="true">       _
- |_|_ / \ |_|_
-   |  \_/   |</pre>
-  <h1>No such route</h1>
-  <p class="lede-2">The page you asked for is not in this namespace. It may once have existed, it may never have existed, and at this level of clearance the difference is academic.</p>
+<main id="main">
+<section class="intro grid">
+  <h1 class="title">No such route</h1>
+  <p class="lede">The page you asked for is not in this namespace. It may once have existed, it may never have existed, and at this level of clearance the difference is academic.</p>
+</section>
 
+<dl class="meta">
+  <div><dt>Requested</dt><dd><span class="trace">/the/place/you/tried</span></dd></div>
+  <div><dt>Object</dt><dd>404</dd></div>
+  <div><dt>Control</dt><dd><span class="state err">not found</span></dd></div>
+</dl>
+
+<article class="doc grid">
+  <div class="doc-body">
   <pre><code>route lookup failed
   requested: <span class="trace">/the/place/you/tried</span>
   code:      404
-  hint:      the route table is short. try the command palette (<span class="kbd">⌘K</span>) —
+  hint:      the route table is short. try the command palette (<kbd>⌘K</kbd>) —
              it knows all six destinations this site has.</code></pre>
+  </div>
+</article>
 
-  <p class="doc-foot"><a href="/">← return to /</a> · <a href="/writings/">writings</a> · <a href="/projects/">projects</a></p>
+<div class="doc-foot grid">
+  <p><a href="/" data-escape>← return to /</a> · <a href="/writings/">writings</a> · <a href="/projects/">projects</a></p>
+</div>
 </main>
 
-<footer class="foot">
-  <p class="f-1">internaltooling · all systems nominal</p>
-  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
-  <p class="f-3">no cookies, no trackers, just files</p>
-  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
-  <p class="f-5">internal use only · public by mistake · clearance: any</p>
-  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
+<footer class="foot grid">
+  <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
+  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><kbd>⌘K</kbd> to navigate</p>
+  <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
 </body>

@@ -5,45 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RFC-0001 — The tool nobody asked for — internaltooling</title>
 <meta name="description" content="RFC-0001: on building software for problems that only exist because you wanted to build the software.">
-<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">skip to content</a>
-<div class="dots" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">Skip to content</a>
 <div class="page">
 
-<header class="bar">
-  <a class="brand" href="/">~internaltooling</a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+<header class="top grid">
+  <a class="brand" href="/">internaltooling</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span></button>
   <nav class="nav" id="nav" aria-label="Site">
-    <span class="nav-h">directories:</span>
-    <a href="/writings/" aria-current="page">~/writings</a>
-    <a href="/projects/">~/projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+    <a href="/writings/" aria-current="page">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
+    <button class="theme-btn" type="button">Theme: light</button>
   </nav>
-  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main" class="box sheet single">
-  <div class="sheet-head">
-    <dl class="sheet-meta">
-      <dt>Date</dt><dd>2026.01.12</dd>
-      <dt>Object</dt><dd>RFC-0001 · version 1.2</dd>
-      <dt>Subject</dt><dd>The tool nobody asked for</dd>
-      <dt>Control</dt><dd><span class="stamp">accepted</span></dd>
-    </dl>
-    <nav class="sheet-ctl" aria-label="Filing"><a href="/writings/" data-escape>Escape</a><a href="/writings/runbooks-are-love-letters/" rel="next">Future</a><span>Past</span></nav>
-  </div>
-  <p class="crumbs"><a href="/writings/">~/writings</a> $ cat rfc-0001.txt</p>
-  <h1>The tool nobody asked for</h1>
-  <p class="lede-2">Every few weeks I build a tool to solve a problem that did not exist until I wanted to build the tool. This document stops pretending that is an accident.</p>
+<main id="main">
+<section class="intro grid">
+  <h1 class="title">The tool nobody asked for</h1>
+  <p class="lede">Every few weeks I build a tool to solve a problem that did not exist until I wanted to build the tool. This document stops pretending that is an accident.</p>
+</section>
 
+<dl class="meta">
+  <div><dt>Date</dt><dd>2026.01.12</dd></div>
+  <div><dt>Object</dt><dd>RFC-0001 · version&nbsp;1.2</dd></div>
+  <div><dt>Control</dt><dd><span class="state">Accepted</span></dd></div>
+</dl>
+
+<article class="doc grid">
   <div class="doc-body">
   <h2 id="summary">Summary</h2>
   <p>This memo describes a recurring pattern: a small inconvenience is noticed, a smaller tool is designed, and six weekends later the tool has a plug-in system. The pattern is not a bug. It is the entire business case for the hobby. This RFC proposes accepting the loop, naming it, and keeping the blast radius small.</p>
@@ -83,19 +80,17 @@
   <h2 id="status">Status</h2>
   <p>Accepted. Implementation, as always, is already complete and was the point.</p>
   </div>
+</article>
 
-  <div class="doc-foot">
-    <p><a href="/writings/">← index of filings</a> · next: <a href="/writings/runbooks-are-love-letters/">RFC-0002 — Runbooks are love letters</a></p>
-  </div>
+<div class="doc-foot grid">
+  <p><a href="/writings/" data-escape>← index of filings</a> · next: <a href="/writings/runbooks-are-love-letters/">RFC-0002 — Runbooks are love letters</a></p>
+</div>
 </main>
 
-<footer class="foot">
-  <p class="f-1">internaltooling · all systems nominal</p>
-  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
-  <p class="f-3">no cookies, no trackers, just files</p>
-  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
-  <p class="f-5">internal use only · public by mistake · clearance: any</p>
-  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
+<footer class="foot grid">
+  <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
+  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><kbd>⌘K</kbd> to navigate</p>
+  <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
 </body>

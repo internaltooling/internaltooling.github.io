@@ -5,45 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RFC-0002 — Runbooks are love letters — internaltooling</title>
 <meta name="description" content="RFC-0002: documentation is written for one reader — a stranger at 3am who happens to be you.">
-<meta name="theme-color" content="#dedad2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0a10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/RedHatMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">skip to content</a>
-<div class="dots" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">Skip to content</a>
 <div class="page">
 
-<header class="bar">
-  <a class="brand" href="/">~internaltooling</a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
+<header class="top grid">
+  <a class="brand" href="/">internaltooling</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span></button>
   <nav class="nav" id="nav" aria-label="Site">
-    <span class="nav-h">directories:</span>
-    <a href="/writings/" aria-current="page">~/writings</a>
-    <a href="/projects/">~/projects</a>
-    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">control ⌘K</button>
+    <a href="/writings/" aria-current="page">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
+    <button class="theme-btn" type="button">Theme: light</button>
   </nav>
-  <p class="rail-note">users on this box: 1<br>one dot in the background is lit. that is the user.</p>
 </header>
 
-<main id="main" class="box sheet single">
-  <div class="sheet-head">
-    <dl class="sheet-meta">
-      <dt>Date</dt><dd>2026.04.03</dd>
-      <dt>Object</dt><dd>RFC-0002 · version 1.0</dd>
-      <dt>Subject</dt><dd>Runbooks are love letters</dd>
-      <dt>Control</dt><dd><span class="stamp">accepted</span></dd>
-    </dl>
-    <nav class="sheet-ctl" aria-label="Filing"><a href="/writings/" data-escape>Escape</a><a href="/writings/deprecate-yourself-gracefully/" rel="next">Future</a><a href="/writings/the-tool-nobody-asked-for/" rel="prev">Past</a></nav>
-  </div>
-  <p class="crumbs"><a href="/writings/">~/writings</a> $ cat rfc-0002.txt</p>
-  <h1>Runbooks are love letters</h1>
-  <p class="lede-2">A runbook has exactly one reader: a stranger at 3am who is you. Write to them the way you would want to be met at that hour — briefly, kindly, and with the commands already typed.</p>
+<main id="main">
+<section class="intro grid">
+  <h1 class="title">Runbooks are love letters</h1>
+  <p class="lede">A runbook has exactly one reader: a stranger at 3am who is you. Write to them the way you would want to be met at that hour — briefly, kindly, and with the commands already typed.</p>
+</section>
 
+<dl class="meta">
+  <div><dt>Date</dt><dd>2026.04.03</dd></div>
+  <div><dt>Object</dt><dd>RFC-0002 · version&nbsp;1.0</dd></div>
+  <div><dt>Control</dt><dd><span class="state">Accepted</span></dd></div>
+</dl>
+
+<article class="doc grid">
   <div class="doc-body">
   <h2 id="summary">Summary</h2>
   <p>A runbook is a document you write while calm, to be read by someone who is not calm. That the two people share a body is a coincidence of self-hosting, and the worst excuse available. Three-in-the-morning you has the same qualifications as a new hire on their first night shift: technical access, no context, and a strong preference for not being here.</p>
@@ -84,19 +81,17 @@ LAST UPDATED: 2026-04-01 (by calmer you)</code></pre>
   <h2 id="closing">Closing</h2>
   <p>Documentation is written for an audience. A runbook is written for a person. The whole genre works because somewhere down the line, the person who has to cope is the one who prepared — and the kindest thing you can send forward through time is not wisdom, not architecture, but a short list of working commands.</p>
   </div>
+</article>
 
-  <div class="doc-foot">
-    <p><a href="/writings/">← index of filings</a> · previous: <a href="/writings/the-tool-nobody-asked-for/">RFC-0001 — The tool nobody asked for</a> · next: <a href="/writings/deprecate-yourself-gracefully/">RFC-0003 — Deprecate yourself gracefully</a></p>
-  </div>
+<div class="doc-foot grid">
+  <p><a href="/writings/" data-escape>← index of filings</a> · previous: <a href="/writings/the-tool-nobody-asked-for/">RFC-0001 — The tool nobody asked for</a> · next: <a href="/writings/deprecate-yourself-gracefully/">RFC-0003 — Deprecate yourself gracefully</a></p>
+</div>
 </main>
 
-<footer class="foot">
-  <p class="f-1">internaltooling · all systems nominal</p>
-  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
-  <p class="f-3">no cookies, no trackers, just files</p>
-  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
-  <p class="f-5">internal use only · public by mistake · clearance: any</p>
-  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
+<footer class="foot grid">
+  <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
+  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><kbd>⌘K</kbd> to navigate</p>
+  <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
 </body>
