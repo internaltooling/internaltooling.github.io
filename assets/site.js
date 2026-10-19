@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#f7f6f2", dark: "#000000" };
+  var colors = { light: "#f7f6f2", dark: "#0d0d0c" };
 
   // ---- theme ----
 
