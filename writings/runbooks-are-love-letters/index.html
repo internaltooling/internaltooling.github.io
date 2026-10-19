@@ -5,120 +5,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RFC-0002 — Runbooks are love letters — internaltooling</title>
 <meta name="description" content="RFC-0002: documentation is written for one reader — a stranger at 3am who happens to be you.">
-<meta name="theme-color" content="#efece4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/Ronzino-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/MartianMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Ronzino-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
-<body>
+<body class="inverted">
 <a class="skip" href="#main">skip to content</a>
-
-<div class="banner" role="presentation"><span>internal use only · public by mistake · clearance: any</span><span>no cookies · no trackers · just files</span></div>
+<div class="guides" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <header class="bar">
-  <div class="bar-inner">
-    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>internaltooling</a>
-    <nav class="nav" id="nav" aria-label="Site">
-      <a href="/writings/" aria-current="page"><span class="slash">/</span>writings</a>
-      <a href="/projects/"><span class="slash">/</span>projects</a>
-      <a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer"><span class="slash">/</span>x&nbsp;@internaltooling&nbsp;↗</a>
-      <button class="theme-btn" type="button">theme: light</button>
-      <button class="palette-btn" type="button" aria-label="Open command palette"><span class="kbd">⌘K</span> jump</button>
-    </nav>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ <span class="menu-label">menu</span></button>
-  </div>
+  <a class="brand" href="/">internaltooling</a>
+  <nav class="nav" id="nav" aria-label="Site">
+    <a href="/writings/" aria-current="page">Writings</a>
+    <a href="/projects/">Projects</a>
+    <button class="palette-btn" type="button" aria-label="Control: open the command palette (⌘K)">Control</button>
+  </nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">menu</span></button>
 </header>
 
-<main id="main">
-  <p class="crumbs"><a href="/writings/">~/writings</a> $ cat rfc-0002.txt</p>
-
-  <article class="doc">
-  <div class="doc-head">
-    <p class="doc-id"><span>RFC-0002</span><span>filed 2026-04-03</span><span>version 1.0</span><span class="stamp">accepted</span></p>
-    <h1>Runbooks are love letters</h1>
-    <p class="lede">A runbook has exactly one reader: a stranger at 3am who is you. Write to them the way you would want to be met at that hour — briefly, kindly, and with the commands already typed.</p>
+<main id="main" class="sheet">
+  <div class="sheet-head">
+    <dl class="sheet-meta">
+      <dt>Date</dt><dd>2026.04.03</dd>
+      <dt>Object</dt><dd>RFC-0002 · version 1.0</dd>
+      <dt>Subject</dt><dd>Runbooks are love letters</dd>
+      <dt>Control</dt><dd><span class="stamp">accepted</span></dd>
+    </dl>
+    <nav class="sheet-ctl" aria-label="Filing"><a href="/writings/" data-escape>Escape</a><a href="/writings/deprecate-yourself-gracefully/" rel="next">Future</a><a href="/writings/the-tool-nobody-asked-for/" rel="prev">Past</a></nav>
   </div>
-
-  <aside class="doc-rail"><nav aria-label="Contents"><p>contents</p><ol><li><a href="#summary">Summary</a></li><li><a href="#the-3am-stranger">The 3am stranger</a></li><li><a href="#what-a-runbook-is-not">What a runbook is not</a></li><li><a href="#a-modest-format">A modest format</a></li><li><a href="#closing">Closing</a></li></ol></nav></aside>
+  <p class="crumbs"><a href="/writings/">~/writings</a> $ cat rfc-0002.txt</p>
+  <h1>Runbooks are love letters</h1>
+  <p class="lede-2">A runbook has exactly one reader: a stranger at 3am who is you. Write to them the way you would want to be met at that hour — briefly, kindly, and with the commands already typed.</p>
 
   <div class="doc-body">
   <h2 id="summary">Summary</h2>
-      <p>A runbook is a document you write while calm, to be read by someone who is not calm. That the two people share a body is a coincidence of self-hosting, and the worst excuse available. Three-in-the-morning you has the same qualifications as a new hire on their first night shift: technical access, no context, and a strong preference for not being here.</p>
+  <p>A runbook is a document you write while calm, to be read by someone who is not calm. That the two people share a body is a coincidence of self-hosting, and the worst excuse available. Three-in-the-morning you has the same qualifications as a new hire on their first night shift: technical access, no context, and a strong preference for not being here.</p>
 
-      <p>This RFC proposes a simple test for every runbook. Open it at 3am, under artificial light, with something beeping. If any sentence in it makes you do arithmetic, the sentence has failed. If any step assumes you remember why the service exists, the step has failed. A runbook that passes the test is a letter that says: <em>I knew you would be here. I got the lantern ready.</em></p>
+  <p>This RFC proposes a simple test for every runbook. Open it at 3am, under artificial light, with something beeping. If any sentence in it makes you do arithmetic, the sentence has failed. If any step assumes you remember why the service exists, the step has failed. A runbook that passes the test is a letter that says: <em>I knew you would be here. I got the lantern ready.</em></p>
 
-      <h2 id="the-3am-stranger">The 3am stranger</h2>
-      <p>Describe them precisely, because you are writing for them and nobody else:</p>
-      <ul>
-        <li>They have forgotten the incident from last time, on purpose, as a survival mechanism.</li>
-        <li>They cannot remember what <code>svc-03</code> does, only that it is named like something important.</li>
-        <li>They will read at approximately double normal speed and retain half as much.</li>
-        <li>They are doing this instead of sleeping, and they know it, and they would like it to be over.</li>
-      </ul>
-      <p>Write for that person and the document is good. Write for the conference-talk version of yourself — the one with diagrams and an architecture philosophy — and you have written a blog post with delusions of usefulness.</p>
+  <h2 id="the-3am-stranger">The 3am stranger</h2>
+  <p>Describe them precisely, because you are writing for them and nobody else:</p>
+  <ul>
+    <li>They have forgotten the incident from last time, on purpose, as a survival mechanism.</li>
+    <li>They cannot remember what <code>svc-03</code> does, only that it is named like something important.</li>
+    <li>They will read at approximately double normal speed and retain half as much.</li>
+    <li>They are doing this instead of sleeping, and they know it, and they would like it to be over.</li>
+  </ul>
+  <p>Write for that person and the document is good. Write for the conference-talk version of yourself — the one with diagrams and an architecture philosophy — and you have written a blog post with delusions of usefulness.</p>
 
-      <h2 id="what-a-runbook-is-not">What a runbook is not</h2>
-      <p>It is not documentation. Documentation explains a system to someone who wants to understand it. A runbook rescues someone who just wants it to stop. The difference shows up in the verbs: documentation says “the queue drains when…”, a runbook says “run this, then check that”.</p>
-      <p>It is also not a place for options. At 3am, two options is one too many. If there are genuinely two paths, mark one <code>START HERE</code> and put the other under a heading that begins “only if the above made it worse”.</p>
+  <h2 id="what-a-runbook-is-not">What a runbook is not</h2>
+  <p>It is not documentation. Documentation explains a system to someone who wants to understand it. A runbook rescues someone who just wants it to stop. The difference shows up in the verbs: documentation says “the queue drains when…”, a runbook says “run this, then check that”.</p>
+  <p>It is also not a place for options. At 3am, two options is one too many. If there are genuinely two paths, mark one <code>START HERE</code> and put the other under a heading that begins “only if the above made it worse”.</p>
 
-      <h2 id="a-modest-format">A modest format</h2>
-      <pre><code># runbook: thing will not start
+  <h2 id="a-modest-format">A modest format</h2>
+  <pre><code># runbook: thing will not start
 
-    WHAT YOU WILL SEE: exit 1, message about "lock"
-    SEVERITY: annoying, not bleeding
+WHAT YOU WILL SEE: exit 1, message about "lock"
+SEVERITY: annoying, not bleeding
 
-    1. ls /var/run/thing/        # leftover pid file?
-    2. rm /var/run/thing/thing.pid
-    3. systemctl start thing
-    4. curl -s localhost:8420/health   # want: {"ok":true}
+1. ls /var/run/thing/        # leftover pid file?
+2. rm /var/run/thing/thing.pid
+3. systemctl start thing
+4. curl -s localhost:8420/health   # want: {"ok":true}
 
-    IF STILL BROKEN: it is the disk. It is always the disk.
-    df -h /var   # over 90% = your answer
+IF STILL BROKEN: it is the disk. It is always the disk.
+df -h /var   # over 90% = your answer
 
-    LAST UPDATED: 2026-04-01 (by calmer you)</code></pre>
-      <p>Four kinds of line, and nothing else: what you will see, what to do, how to know it worked, and where to go next. Anything beyond that is a love letter with a résumé stapled to it.</p>
+LAST UPDATED: 2026-04-01 (by calmer you)</code></pre>
+  <p>Four kinds of line, and nothing else: what you will see, what to do, how to know it worked, and where to go next. Anything beyond that is a love letter with a résumé stapled to it.</p>
 
-      <h2 id="closing">Closing</h2>
-      <p>Documentation is written for an audience. A runbook is written for a person. The whole genre works because somewhere down the line, the person who has to cope is the one who prepared — and the kindest thing you can send forward through time is not wisdom, not architecture, but a short list of working commands.</p>
+  <h2 id="closing">Closing</h2>
+  <p>Documentation is written for an audience. A runbook is written for a person. The whole genre works because somewhere down the line, the person who has to cope is the one who prepared — and the kindest thing you can send forward through time is not wisdom, not architecture, but a short list of working commands.</p>
   </div>
 
   <div class="doc-foot">
     <p><a href="/writings/">← index of filings</a> · previous: <a href="/writings/the-tool-nobody-asked-for/">RFC-0001 — The tool nobody asked for</a> · next: <a href="/writings/deprecate-yourself-gracefully/">RFC-0003 — Deprecate yourself gracefully</a></p>
   </div>
-  </article>
 </main>
 
 <footer class="foot">
-  <div class="hazard" aria-hidden="true"></div>
-  <div class="foot-inner">
-    <div class="plate">
-      <div>
-        <h3>model</h3>
-        <p class="model">internaltooling</p>
-        <p>Pseudonymous operator of a very small fleet.</p>
-        <span class="pill ok live">all systems nominal</span>
-      </div>
-      <div>
-        <h3>index</h3>
-        <ul><li><a href="/">/home</a></li><li><a href="/writings/">/writings</a></li><li><a href="/projects/">/projects</a></li></ul>
-      </div>
-      <div>
-        <h3>elsewhere</h3>
-        <ul><li><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></li></ul>
-      </div>
-      <div>
-        <h3>operating notes</h3>
-        <p><span class="kbd">⌘K</span> to navigate</p>
-        <p>no cookies, no trackers, just files</p>
-      </div>
-    </div>
-    <p class="foot-line"><span>internaltooling · all systems nominal</span><span>internal use only · public by mistake</span></p>
-  </div>
+  <p class="f-1">internaltooling · all systems nominal</p>
+  <p class="f-2"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
+  <p class="f-3">no cookies, no trackers, just files</p>
+  <p class="f-4"><button class="theme-btn" type="button">theme: light</button></p>
+  <p class="f-5">internal use only · public by mistake · clearance: any</p>
+  <p class="f-6"><span class="kbd">⌘K</span> to navigate</p>
 </footer>
 </body>
 </html>

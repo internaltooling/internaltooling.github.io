@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#efece4", dark: "#0d0d0c" };
+  var colors = { light: "#ffffff", dark: "#000000" };
 
   // ---- theme ----
 
@@ -62,6 +62,10 @@
   // ---- 404: show the path that failed ----
 
   document.querySelectorAll(".trace").forEach(function (el) { el.textContent = location.pathname; });
+
+  // ---- sheets: Escape goes back, like the registry ----
+
+  var escape = document.querySelector("[data-escape]");
 
   // ---- uptime on the home page ----
 
@@ -148,6 +152,7 @@
   document.querySelectorAll(".palette-btn").forEach(function (b) { b.addEventListener("click", openPalette); });
   document.addEventListener("keydown", function (e) {
     var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+    if (e.key === "Escape" && escape && !dialog.open && !typing && !(nav && nav.classList.contains("open"))) { location.href = escape.href; return; }
     if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing && !dialog.open)) {
       e.preventDefault();
       openPalette();
