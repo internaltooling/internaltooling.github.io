@@ -15,6 +15,7 @@
    Type      t1 13 mono notes · t2 17 interface · t3 21 reading · t4 44 titles · t5 the name, fitted to the width
    Space     4 · 8 · 16 · 24 · 48 · 96
    Colour    paper, ink, mute, rule, tint, one accent (the stamp) + three status colours, nothing else
+   Art       the exhibits are grey at rest where a pointer can hover, in colour on hover, dimmed in the dark theme
    Theme     dark by default, light on request */
 
 :root {
@@ -55,6 +56,7 @@
   --ok: #5fae80;
   --warn: #dba24c;
   --err: #e2725f;
+  --art-dim: brightness(0.86);
   color-scheme: dark;
 }
 :root[data-theme="light"] {
@@ -68,6 +70,7 @@
   --ok: #2c7548;
   --warn: #9c5e00;
   --err: #b8361f;
+  --art-dim: brightness(1);
   color-scheme: light;
 }
 
@@ -392,6 +395,16 @@ a.row:hover .r-subj { text-decoration: underline; text-decoration-thickness: 1px
   .doc-body pre { margin-inline: calc(-1 * var(--margin)); padding-inline: var(--margin); font-size: var(--t1); }
 }
 
+/* ---- exhibits: Calvin and Hobbes, by Bill Watterson ---- */
+
+.exhibit img { display: block; width: 100%; height: auto; background: var(--tint); filter: var(--art-dim); }
+.exhibit figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: var(--s3); margin-top: var(--s2); font: 400 var(--t1) / var(--lh) var(--mono); font-variant-numeric: tabular-nums lining-nums; color: var(--mute); }
+.exhibit figcaption a { color: var(--ink); }
+@media (hover: hover) {
+  .exhibit img { filter: grayscale(1) var(--art-dim); }
+  .exhibit:hover img { filter: var(--art-dim); }
+}
+
 .doc-foot { padding-top: var(--s6); }
 .doc-foot p { grid-column: var(--col-main); padding-top: var(--s3); border-top: 1px solid var(--rule); }
 
@@ -450,4 +463,5 @@ a.row:hover .r-subj { text-decoration: underline; text-decoration-thickness: 1px
 @media (prefers-reduced-motion: no-preference) {
   a, .cell, .row, .redact { transition: color 0.12s, background-color 0.12s; }
   .masthead span { transition: opacity 0.4s ease; }
+  .exhibit img { transition: filter 0.4s ease; }
 }

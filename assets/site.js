@@ -85,7 +85,7 @@
     { label: "RFC-0002 runbooks are love letters", hint: "read", href: "/writings/runbooks-are-love-letters/" },
     { label: "RFC-0003 deprecate yourself gracefully", hint: "read", href: "/writings/deprecate-yourself-gracefully/" },
     { label: "x.com/internaltooling", hint: "new tab", href: "https://x.com/internaltooling", external: true },
-    { label: "toggle theme", hint: "action", action: function () { themeBtn && themeBtn.click(); } }
+    { label: "transmogrify (toggle theme)", hint: "action", action: function () { themeBtn && themeBtn.click(); } }
   ];
 
   var dialog = document.createElement("dialog");
