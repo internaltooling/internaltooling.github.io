@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#f2f0ea", dark: "#0b0b0a" };
+  var colors = { light: "#f7f0e1", dark: "#18202c" };
 
   // ---- theme ----
 
@@ -12,12 +12,12 @@
     });
     var btn = document.querySelector(".theme-btn");
     if (btn) {
-      btn.textContent = theme === "dark" ? "Theme: dark" : "Theme: light";
-      btn.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " theme");
+      btn.textContent = theme === "dark" ? "Theme: night" : "Theme: day";
+      btn.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "day" : "night") + " theme");
     }
   }
 
-  applyTheme(root.dataset.theme || "dark");
+  applyTheme(root.dataset.theme || "light");
 
   var themeBtn = document.querySelector(".theme-btn");
   if (themeBtn) {
