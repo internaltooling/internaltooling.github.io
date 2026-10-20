@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var colors = { light: "#f7f6f2", dark: "#0d0d0c" };
+  var colors = { light: "#f2f0ea", dark: "#0b0b0a" };
 
   // ---- theme ----
 
@@ -17,11 +17,7 @@
     }
   }
 
-  function storedTheme() {
-    try { return localStorage.getItem("theme"); } catch (e) { return null; }
-  }
-
-  applyTheme(root.dataset.theme || "light");
+  applyTheme(root.dataset.theme || "dark");
 
   var themeBtn = document.querySelector(".theme-btn");
   if (themeBtn) {
@@ -31,10 +27,6 @@
       applyTheme(next);
     });
   }
-
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
-    if (!storedTheme()) applyTheme(e.matches ? "dark" : "light");
-  });
 
   // ---- phone menu ----
 

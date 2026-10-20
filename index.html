@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>internaltooling</title>
 <meta name="description" content="internaltooling — pseudonymous operator of a very small fleet. Writings filed as RFCs, projects run as services.">
-<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0b0b0a">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark";}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/SourceSerif4-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("theme")||"dark";}catch(e){document.documentElement.dataset.theme="dark";}</script>
+<link rel="preload" href="/assets/fonts/Redaction-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -24,17 +23,19 @@
     <a href="/writings/">Writings</a>
     <a href="/projects/">Projects</a>
     <button class="palette-btn" type="button" aria-label="Jump to a page (⌘K)">Jump to<kbd>⌘K</kbd></button>
-    <button class="theme-btn" type="button">Theme: light</button>
+    <button class="theme-btn" type="button">Theme: dark</button>
   </nav>
 </header>
 
 <main id="main">
+<p class="masthead" aria-hidden="true"><span>internaltooling</span><span>internaltooling</span></p>
 <section class="intro grid">
   <h1 class="lede">Pseudonymous operator of a very small fleet. I build tools nobody asked for, file RFCs against my own behaviour, and keep the lights green for an audience of one.</h1>
   <p class="note">You are welcome to look around — everything here is marked internal, which is a joke that got out of hand.</p>
 </section>
 
 <ul class="index" aria-label="Registry: writings and services">
+  <li class="index-head" aria-hidden="true"><span>No.</span><span>Subject</span><span>Status</span><span>Filed</span></li>
   <li><a class="cell" href="/projects/#svc-01-h"><span class="cell-id"><span>svc-01</span><span>2024</span></span><span class="cell-t">watchtower</span><span class="cell-m"><span class="state">Live</span></span></a></li>
   <li><a class="cell" href="/projects/#svc-02-h"><span class="cell-id"><span>svc-02</span><span>2025</span></span><span class="cell-t">logthief</span><span class="cell-m"><span class="state">Live</span></span></a></li>
   <li><a class="cell" href="/projects/#svc-03-h"><span class="cell-id"><span>svc-03</span><span>2026</span></span><span class="cell-t">pager-rotation-of-one</span><span class="cell-m"><span class="state warn">Beta</span></span></a></li>
@@ -51,7 +52,7 @@
     <dl class="kv">
       <dt>Handle</dt><dd>internaltooling</dd>
       <dt>Role</dt><dd>operator; responder of pages</dd>
-      <dt>Location</dt><dd>behind the terminal</dd>
+      <dt>Location</dt><dd><span class="redact" tabindex="0" title="Redacted. Hover or tap to read.">behind the terminal</span></dd>
       <dt>Clearance</dt><dd>self-administered</dd>
       <dt>Status</dt><dd><span class="state">active</span></dd>
       <dt>Uptime</dt><dd class="num" data-uptime="2024-03-15T09:00:00Z">…</dd>
@@ -79,7 +80,7 @@
 
 <footer class="foot grid">
   <p class="f-a">internaltooling · all systems nominal<br>no cookies, no trackers, just files</p>
-  <p class="f-b"><span>internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><span class="keys"><kbd>⌘K</kbd> to navigate</span></p>
+  <p class="f-b"><span class="stamp">internal use only</span><span class="sep"> · </span><span>public by mistake</span><span class="sep"> · </span><span>clearance: any</span><br><span class="keys"><kbd>⌘K</kbd> to navigate</span></p>
   <p class="f-c"><a href="https://x.com/internaltooling" target="_blank" rel="noopener noreferrer">x/@internaltooling ↗</a></p>
 </footer>
 </div>
